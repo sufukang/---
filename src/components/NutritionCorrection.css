@@ -1,0 +1,799 @@
+.nutrition-correction {
+  padding: 60px 0;
+  background: #FFFAFA;
+  min-height: 80vh;
+}
+
+.nutrition-correction .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.correction-content {
+  text-align: center;
+  background: #FFFAFA;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003CBF;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+.correction-layout {
+    display: grid;
+    grid-template-columns: 300px 420px 370px; 
+    gap: 20px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center; /* 添加水平居中 */
+  }
+
+/* 维生素C检测卡片 */
+.vitamin-card {
+  background: #003CBF;
+  border-radius: 20px;
+  padding-top: 20px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(99, 143, 236, 0.3);
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card-header h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.vitamin-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.deficiency-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FF5C4D;
+}
+
+.deficiency-meter {
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+
+.meter-bar {
+  position: relative;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  background:#FF5C4D;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+
+.intake-info {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.intake-text {
+    height: 30px;
+    font-family: PingFang SC, PingFang SC;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 30px;
+    text-align: center;
+    font-style: normal;
+    text-transform: none
+}
+
+.intake-amount {
+   
+    height: 30px;
+    font-family: PingFang SC, PingFang SC;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 30px;
+    text-align: center;
+    font-style: normal;
+    text-transform: none
+}
+
+.body-effects {
+    padding: 20px;
+   border-radius: 0 0 20px 20px;
+    /* padding: 20px 20px; */
+  background-color: #FFFFFF;
+}
+
+.effects-title {
+
+    width: 198px;
+    height: 15px;
+    font-family: PingFang SC, PingFang SC;
+    font-weight: 600;
+    font-size: 17px;
+    color: #2C324E;
+    line-height: 17px;
+    text-align: left;
+    font-style: normal;
+    text-transform: none;
+}
+
+ .effects-grid {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+} 
+
+/* 为effect-tag添加简单的动画效果 */
+.effect-tag {
+    width: 120px;
+    height: 30px;
+    background: #F4F9FF;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #DCE2FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.effect-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.effect-tag.positive {
+    background: #FFFAFA;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #FFDEDE;
+    color: #FF5C4D;
+}
+
+.effect-tag.negative {
+    background: #F4F9FF;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #DCE2FF;
+    color: #003CBF;
+}
+
+.effect-tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-100%);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.effect-tag.positive {
+    background: #FFFAFA;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #FFDEDE;
+    color: #FF5C4D;
+    animation: pulse 2s infinite;
+}
+
+.effect-tag.negative {
+    background: #F4F9FF;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #DCE2FF;
+    color: #003CBF;
+    animation: bounce 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+    
+.effect-tag:nth-child(1) { animation-delay: 0s; }
+.effect-tag:nth-child(2) { animation-delay: 0.2s; }
+.effect-tag:nth-child(3) { animation-delay: 0.4s; }
+.effect-tag:nth-child(4) { animation-delay: 0.6s; }
+.effect-tag:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes tagFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.deficiency-label{
+    margin-left: 40px;
+    width: 60px;
+height: 10px;
+font-family: PingFang SC, PingFang SC;
+font-weight: 400;
+font-size: 12px;
+color: #CBE2FF;
+line-height: 12px;
+text-align: center;
+font-style: normal;
+text-transform: none;
+}
+
+.effect-tag.positive {
+    background: #FFFAFA;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #FFDEDE;
+    color: #FF5C4D;
+}
+
+.effect-tag.negative {
+    background: #F4F9FF;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #DCE2FF;
+    color: #003CBF;
+} 
+
+/* 饮食建议 */
+.diet-advice {
+  background: #FFFFFF;
+  max-width: 426px;
+  border-radius: 15px;
+  padding-left: 20px;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.1);
+}
+
+.diet-advice h3 {
+   max-width: 81px;
+    height: 18px;
+    font-family: PingFang SC, PingFang SC;
+    font-weight: 600;
+    font-size: 18px;
+    color: #00133D;
+    line-height: 18px;
+    text-align: left;
+    font-style: normal;
+    text-transform: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.diet-section {
+  margin-bottom: 25px;
+  max-width: 380px;
+}
+.food-image2{
+    width: 350px;
+    height: 150px;
+}
+
+.food-image1{
+    margin-left: 20px;
+    width: 200px; /* 与food-image2保持一致的宽度 */
+  height: 80px; /* 自动调整高度保持比例 */
+  margin-top: 10px; /* 与标题保持一定距离 */
+  display: block; /* 块级显示 */
+}
+
+.section-title {
+    height: 14px;
+    font-family: PingFang SC, PingFang SC;
+    font-weight: 400;
+    font-size: 16px;
+    color: #00133D;
+    line-height: 16px;
+    text-align: left;
+    font-style: normal;
+    text-transform: none;
+}
+.title-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+  }
+
+.section-title span {
+  font-family: Gilroy, Gilroy;
+font-weight: bold;
+font-size: 24px;
+color: #FF5B4D;
+line-height: 24px;
+text-align: left;
+font-style: normal;
+text-transform: none;
+margin-right: 12px;
+}
+.advice-text{
+    width: 97px;
+height: 10px;
+font-family: Noto Sans SC, Noto Sans SC;
+font-weight: 400;
+font-size: 14px;
+color: #959FB7;
+line-height: 14px;
+text-align: left;
+font-style: normal;
+margin-left: 40px;
+text-transform: none;
+margin-top: 15px;
+}
+.red {
+  font-family: Gilroy, Gilroy;
+  font-weight: bold;
+  font-size: 24px;
+  color: #003CBF;
+  line-height: 24px;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-right: 12px;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 6px;
+}
+
+.food-item {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.food-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 单个案例卡片样式 */
+/* 卡片布局 */
+
+
+
+/* 内容容器 */
+.doctor-card{
+    display: flex;
+}
+.doctor-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+.doctor {
+    font-family: PingFang SC, PingFang SC;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333333;
+    line-height: 32px;
+    font-style: normal;
+    text-transform: none;
+}
+.doctor-name {
+    font-family: PingFang SC, PingFang SC;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333333;
+    line-height: 32px;
+    font-style: normal;
+    text-transform: none;
+    text-align: left;
+ 
+}
+.doctor-text{
+    margin-top: 10px;
+    width: 202px;
+height: 79px;
+font-family: PingFang SC, PingFang SC;
+font-weight: 400;
+font-size: 20px;
+color: #333333;
+line-height: 26px;
+text-align: left;
+font-style: normal;
+text-transform: none;
+}
+.doctor-news{
+   max-width: 337px;
+font-family: PingFang SC, PingFang SC;
+font-weight: 400;
+font-size: 16px;
+color: #333333;
+line-height: 26px;
+text-align: left;
+font-style: normal;
+text-transform: none;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.doctor-new{
+    margin-top: 10px;
+    width: 337px;
+font-family: PingFang SC, PingFang SC;
+font-weight: 400;
+font-size: 16px;
+color: #333333;
+line-height: 26px;
+text-align: left;
+font-style: normal;
+text-transform: none;
+}
+.doctor-new span{
+  color: #003CBF;
+}
+.card{
+    padding: 20px;
+    max-width: 380px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.card:active {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 60, 191, 0.2);
+  }
+  
+  /* 添加微妙的边框渐变效果 */
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #007AFF, #00C6FF);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card:hover::before {
+    opacity: 1;
+  }
+  /* 轮播容器 */
+.carousel-container {
+    width: 380px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  /* 轮播内容 */
+  /* 轮播过渡效果 */
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+  }
+  
+  /* 临时禁用过渡效果的类 */
+  .carousel.no-transition {
+    transition: none;
+  }
+  .carousel .card {
+    flex: 0 0 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* 分页指示器 */
+  .pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #003CBF;
+  }
+
+/* 响应式设计 - 平板设备 */
+@media (max-width: 1100px) and (min-width: 800px) {
+  .correction-layout {
+    grid-template-columns: 280px 380px 340px;
+    gap: 10px;
+    align-items: center;
+    max-width: 1150px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 0 20px; /* 增加左右内边距 */
+  }
+  
+  .nutrition-correction .container {
+    padding: 0 40px; /* 增加容器的左右内边距 */
+  }
+  
+  .main-title {
+    font-size: 1.6rem;
+  }
+  
+  .subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* 平板竖屏和手机端保持单列布局 */
+@media (max-width: 820px) {
+  .correction-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .vitamin-card,
+  .diet-advice,
+  .carousel-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* 响应式设计 - 手机设备 */
+@media (max-width: 768px) {
+  .nutrition-correction {
+    padding: 40px 0;
+  }
+  
+  .nutrition-correction .container {
+    padding: 0 15px;
+  }
+  
+  .correction-layout {
+    gap: 15px;
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+  
+  .vitamin-card {
+    padding-top: 15px;
+  }
+  
+  .card-header {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .card-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .deficiency-value {
+    font-size: 1.3rem;
+  }
+  
+  .deficiency-meter {
+    padding: 0 15px;
+  }
+  
+  .body-effects {
+    padding: 15px;
+  }
+  
+  .effects-grid {
+    gap: 10px;
+  }
+  
+  .effect-tag {
+    width: 100px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+  
+  .diet-advice {
+    padding-left: 15px;
+  }
+  
+  .diet-advice h3 {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .food-image1 {
+    width: 180px;
+    height: 70px;
+    margin-left: 10px;
+  }
+  
+  .food-image2 {
+    width: 300px;
+    height: 130px;
+  }
+  
+  .section-title {
+    font-size: 14px;
+  }
+  
+  .section-title span {
+    font-size: 20px;
+  }
+  
+  .advice-text {
+    font-size: 12px;
+    margin-left: 20px;
+  }
+  
+  .doctor-card img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .doctor-name {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  
+  .doctor-text {
+    font-size: 16px;
+    line-height: 22px;
+    width: 180px;
+    height: auto;
+  }
+  
+  .doctor-news,
+  .doctor-new {
+    width: 100%;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .card {
+    padding: 15px;
+    width: 100%;
+  }
+  
+  .carousel-container {
+    width: 100%;
+  }
+}
+
+/* 响应式设计 - 小屏手机 */
+@media (max-width: 480px) {
+  .nutrition-correction {
+    padding: 30px 0;
+  }
+  
+  .main-title {
+    font-size: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .deficiency-label {
+    margin-left: 0;
+  }
+  
+  .effects-grid {
+    justify-content: center;
+  }
+  
+  .effect-tag {
+    width: 90px;
+    height: 26px;
+    font-size: 0.75rem;
+  }
+  
+  .food-image1 {
+    width: 160px;
+    height: 60px;
+  }
+  
+  .food-image2 {
+    width: 280px;
+    height: 120px;
+  }
+  
+  .doctor-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .doctor-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .doctor-text {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .doctor-news,
+  .doctor-new {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
