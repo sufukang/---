@@ -74,7 +74,7 @@ function Hero() {
                 <div className="stat-label">{t('hero.stats.innovation')}</div>
               </div>
               <div className="stat">
-                <div className="stat-number">82</div>
+                <div className="stat-number">42</div>
                 <div className="stat-label">{t('hero.stats.projects')}</div>
               </div>
             </div>

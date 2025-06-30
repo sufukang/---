@@ -20,7 +20,7 @@ const resources = {
         stats: {
           modules: '5大核心功能',
           innovation: '90秒无创监测',
-          projects: '82种监测项目'
+          projects: '42种监测项目'
         },
         features: {
           feature1: '无创营养活力检测',
@@ -52,7 +52,7 @@ const resources = {
       // 营养检测组件翻译
       nutrition: {
         title: '90秒无创监测',
-        subtitle: '10项维生素，16项微量元素和矿物质，以及数百项更多功能...',
+        subtitle: '10项维生素，7项矿物质，9项微量元素，16项体质状态评估',
         panels: {
           vitamin: '维生素缺乏力展示',
           mineral: '矿物质展示力展示', 
@@ -301,18 +301,14 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
+    lng: 'zh',
     fallbackLng: 'zh',
     debug: process.env.NODE_ENV === 'development',
     interpolation: {
       escapeValue: false
-    },
-    detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage']
     }
   });
 

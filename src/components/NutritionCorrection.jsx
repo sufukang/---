@@ -72,11 +72,10 @@ const NutritionCorrection = () => {
             </div>
             {/* 中间饮食建议 */}
             <div className="diet-advice">
-              <h3>饮食建议</h3>
-
+              <h3>近期饮食建议</h3>
               <div className="diet-section">
                 <div className="title-row">
-                  <h4 className="section-title"><span>3</span>种不耐受食材</h4>
+                  <h4 className="section-title"><span>3</span>种不推荐食材</h4>
                   <span className="advice-text">建议减少摄入</span>
                 </div>
               <img src={food1Image} alt="" className="food-image1" />
@@ -84,7 +83,7 @@ const NutritionCorrection = () => {
 
               <div className="diet-section">
               <div className="title-row">
-                <h4 className="section-title "><span style={{color:"#003CBF"}}>6</span>种适宜食材</h4>
+                <h4 className="section-title "><span style={{color:"#003CBF"}}>6</span>种推荐食材</h4>
                 <span className="advice-text">推荐补充食物</span>
                 </div>
                 <img src={food2Image} alt=""  className="food-image2"/>
