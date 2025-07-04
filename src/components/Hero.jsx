@@ -6,6 +6,8 @@ import productImage1 from '../image/视频图1@2x.png';
 import productImage2 from '../image/视频图2@2x.png';
 import productImage3 from '../image/视频图3@2x.png';
 import productImage4 from '../image/视频图4@2x.png';
+import productImage5 from '../image/视频图5@2x.jpg';
+import productImage6 from '../image/视频图6@2x.jpg';
 import iconGlucose from '../image/图标-无创监测数据@2x.png';
 import iconDataManagement from '../image/图标-具身时序数据管理@2x.png';
 import iconDataVerification from '../image/图标-数据验证营养效果@2x.png';
@@ -21,7 +23,9 @@ function Hero() {
     productImage1,
     productImage2,
     productImage3,
-    productImage4
+    productImage4,
+    productImage5,
+    productImage6
   ];
 
   // 自动轮播效果
